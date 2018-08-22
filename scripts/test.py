@@ -2,8 +2,6 @@ import requests
 import json
 from json2html import *
 
-"""
-"""
 
 def main():
     url = 'https://api.data.gov/ed/collegescorecard/v1/schools.json'
