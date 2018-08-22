@@ -1,0 +1,69 @@
+th {
+  visibility: hidden;
+}
+
+.hero {
+    /* Sizing */
+    width:100%;
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text styles */
+    text-align: center;
+    color: white;
+
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://www.wisc.edu/images/about/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.collegeName {
+  margin-left: 30px;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.WM {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.section-title-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Alignment of graphs and charts in body */
+
+#race_donutchart {
+  margin-left: 50px;
+}
+
+#program_donutchart {
+  float: right;
+}
+
+#net_price_graph {
+  float: left;
+  margin-left: 140px;
+}
+
+#parent_graph {
+display: inline-block;
+margin-left: 60px;
+}
+
+footer {
+  text-align: center;
+}
+
+.section-save-data {
+  margin-bottom: 20px;
+}

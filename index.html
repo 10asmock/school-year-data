@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <header class="hero">
+
+    <div class="hero-inner">
+
+      <table border="0" class="jsonData"><tr><th>school.city</th><th>school.school_url</th><th>school.zip</th><th>2015.student.size</th><th>school.state</th><th>school.name</th></tr></table>
+
+        <div class="collegeName">
+          University of <span class="WM">Wisconsin-Madison</span>
+        </div>
+
+        <div class="schoolLoc">
+          Madison, WI 53706-1380
+        </div>
+
+        <div class="schoolUrl">
+          www.wisc.edu
+        </div>
+
+        <div class="studentNumber">
+          29579 undergraduate students
+        </div>
+
+    </div>
+
+  </header>
+
+<section>
+
+  <h3 class="section-title-info"> 2015 Undergraduate Race/Ethnicity & Program Percentages</h3>
+
+  <div class="row">
+
+    <div id="race_donutchart" style="width: 600px; height: 500px;"></div>
+
+    <div id="program_donutchart" style="width: 600px; height: 500px;"></div>
+
+  </div>
+
+</section>
+
+<hr>
+
+<section>
+
+  <h3 class="section-title-info"> Total Price (by income level) & Parent Education</h3>
+
+  <div class="row">
+
+    <div id="net_price_graph"></div>
+
+    <div id="parent_graph"></div>
+
+  </div>
+
+</section>
+
+<hr>
+
+<footer>
+<h4 class="section-save-data">Save this page</h4>
+
+<button onclick="myFunction()">Print this page</button>
+<button onclick="formData()">Save as PDF</button>
+
+</footer>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+<!-- All Python, JavaScript, and library files used to create this web page -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+<script src="scripts/charts_and_graphs.js"></script>
+<script src="scripts/test.py"></script>
+</body>
+</html>
