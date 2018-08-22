@@ -1,11 +1,15 @@
+import pdfkit
 import requests
 import json
 from json2html import *
 
 
+
 def main():
     url = 'https://api.data.gov/ed/collegescorecard/v1/schools.json'
     payload = {
+    # parses school JSON data from url and joins it to API query
+    # string
         'api_key': "xEkxcoO8n1pP7Mird5j4bmrXj13pnNcndpCoKb9I",
         '_fields': ','.join([
             'school.name',
@@ -22,8 +26,9 @@ def main():
         'school.degrees_awarded.highest__range': '2..4',
         'id': '240444',
     }
+    # sends data to HTML file as table.
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data)
+    formatted_table = json2html.convert(json = data["results"])
     index= open("index.html","w")
     index.write(formatted_table)
     index.close()
@@ -53,10 +58,9 @@ def data_race():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data)
-    index= open("index.html","w")
-    index.write(formatted_table)
-    index.close()
+    # prints all JSON data on vm environment
+    for result in data['results']:
+        print result
 
 data_race()
 
@@ -99,10 +103,8 @@ def data_program_percentage():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data)
-    index= open("index.html","w")
-    index.write(formatted_table)
-    index.close()
+    for result in data['results']:
+        print result
 
 data_program_percentage()
 
@@ -125,10 +127,8 @@ def data_public_net_price():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data)
-    index= open("index.html","w")
-    index.write(formatted_table)
-    index.close()
+    for result in data['results']:
+        print result
 
 data_public_net_price()
 
@@ -149,9 +149,7 @@ def parent_educational_level():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data)
-    index= open("index.html","w")
-    index.write(formatted_table)
-    index.close()
+    for result in data['results']:
+        print result
 
 parent_educational_level()
