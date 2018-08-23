@@ -17,5 +17,5 @@ A Python project which parses JSON data from the college scorecard API and displ
 
 - Click on ```index.html``` to see all JSON data stored in HTML file.
 
-- ADDENDUM: Alternatively, due to a bug (recently fixed) in ```test.py```, click on ```index.html``` to view JSON data manually parsed into HTML document and do not run ```test.py``` beforehand.
+- ADDENDUM: Alternatively, due to a bug (recently fixed) in ```test.py```, click on ```index.html``` to view dynamic web page consisting of charts and graphs of JSON data manually parsed into HTML document. Do not run ```test.py``` beforehand.
 
