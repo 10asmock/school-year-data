@@ -57,7 +57,6 @@ def data_race():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    # prints all JSON data on vm environment
     formatted_json = json.dumps(data["results"])
     index= open("index.html","a")
     index.write(formatted_json)
