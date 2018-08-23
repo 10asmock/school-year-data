@@ -24,11 +24,11 @@ def main():
         'school.degrees_awarded.highest__range': '2..4',
         'id': '240444',
     }
-    # sends data to HTML file as table.
+    # appends data to HTML file as string.
     data = requests.get(url, params=payload).json()
-    formatted_table = json2html.convert(json = data["results"])
-    index= open("index.html","w")
-    index.write(formatted_table)
+    formatted_json = json.dumps(data["results"])
+    index= open("index.html","a")
+    index.write(formatted_json)
     index.close()
 
 main()
@@ -57,8 +57,10 @@ def data_race():
     }
     data = requests.get(url, params=payload).json()
     # prints all JSON data on vm environment
-    for result in data['results']:
-        print result
+    formatted_json = json.dumps(data["results"])
+    index= open("index.html","a")
+    index.write(formatted_json)
+    index.close()
 
 data_race()
 
@@ -101,8 +103,10 @@ def data_program_percentage():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    for result in data['results']:
-        print result
+    formatted_json = json.dumps(data["results"])
+    index= open("index.html","a")
+    index.write(formatted_json)
+    index.close()
 
 data_program_percentage()
 
@@ -125,8 +129,10 @@ def data_public_net_price():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    for result in data['results']:
-        print result
+    formatted_json = json.dumps(data["results"])
+    index= open("index.html","a")
+    index.write(formatted_json)
+    index.close()
 
 data_public_net_price()
 
@@ -147,7 +153,9 @@ def parent_educational_level():
         'id': '240444',
     }
     data = requests.get(url, params=payload).json()
-    for result in data['results']:
-        print result
+    formatted_json = json.dumps(data["results"])
+    index= open("index.html","a")
+    index.write(formatted_json)
+    index.close()
 
 parent_educational_level()
